@@ -1,10 +1,9 @@
-CPlusTest.sln
-CPlusTest/CPlusTest.vcxproj
+
 CPlusTest/CPlusTest.vcxproj.filters
 CPlusTest/CPlusTest.vcxproj.user
-CPlusTest/*
+CPlusTest/Debug/*
 Debug/*
-.vs
+
 
 *.opensdf
 *.sdf
