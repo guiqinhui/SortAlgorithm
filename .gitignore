@@ -1,0 +1,44 @@
+CPlusTest.sln
+CPlusTest/CPlusTest.vcxproj
+CPlusTest/CPlusTest.vcxproj.filters
+CPlusTest/CPlusTest.vcxproj.user
+CPlusTest/*
+Debug/*
+.vs
+
+*.opensdf
+*.sdf
+iKutil.log
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.log
+*.ilk
+*.suo
+iUpdateAuto.exe
+*.tlog
+*.lastbuild
+*.ipch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.sbr
+*.idb
+*.obj
+*.pdb
+*.ncb
+*.pch
+*.bsc
+*.user
+*.dep
+*.map
