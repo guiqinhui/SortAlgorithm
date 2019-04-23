@@ -31,6 +31,7 @@ bool SortMethodClass::SortData(int SortMed, int SortDir, unsigned char *pSrcBuf,
 		}break;
 		case INSERT_SORT:
 		{
+			Sort_Insert(SortDir, pSrcBuf, BufLen);
 		}break;
 		case SHELL_SORT:
 		{
@@ -153,9 +154,30 @@ bool SortMethodClass::Sort_Quick(int SortDir, unsigned char *pSrcBuf, int Start,
 }
 
 //插入排序
-bool SortMethodClass::Sort_Insert()
+//基本思想：在要排序的一组数中，假定前n-1个数已经排好序，现在将第n个数插到前面的有序数列中，使得这n个数也是排好顺序的。如此反复循环，直到全部排好顺序。
+//算法时间复杂度：O(n^2)
+bool SortMethodClass::Sort_Insert(int SortDir, unsigned char *pSrcBuf, int BufLen)
 {
-	return false;
+	int i = 0, j = 0;
+	unsigned char temp = 0;
+	if ((NULL == pSrcBuf)
+		|| (0 > BufLen))
+	{
+		return false;
+	}
+	for (i = 1; i<BufLen; i++)
+	{
+		for (j = i; j >0 ; j--)
+		{
+			if (pSrcBuf[j-1] > pSrcBuf[j])
+			{
+				temp = pSrcBuf[j];
+				pSrcBuf[j] = pSrcBuf[j-1];
+				pSrcBuf[j-1] = temp;
+			}
+		}
+	}
+	return true;
 }
 //希尔排序
 bool SortMethodClass::Sort_Shell()
