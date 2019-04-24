@@ -24,7 +24,7 @@ public:
 	bool Sort_Select(int SortDir, unsigned char *pSrcBuf, int BufLen);
 	bool Sort_Quick(int SortDir, unsigned char *pSrcBuf, int Start, int End);
 	bool Sort_Insert(int SortDir, unsigned char *pSrcBuf, int BufLen);
-	bool Sort_Shell();
+	bool Sort_Shell(int SortDir, unsigned char *pSrcBuf, int BufLen);
 	bool Sort_Merage();
 	void swap(unsigned char x,unsigned char y);
 

@@ -147,10 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Src\Hash_Table.h" />
+    <ClInclude Include="..\Src\ListOperator.h" />
     <ClInclude Include="..\Src\SortMethodClass.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Src\CPlusTest.cpp" />
+    <ClCompile Include="..\Src\Hash_Table.cpp" />
+    <ClCompile Include="..\Src\ListOperator.cpp" />
     <ClCompile Include="..\Src\SortMethodClass.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

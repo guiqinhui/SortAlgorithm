@@ -180,9 +180,36 @@ bool SortMethodClass::Sort_Insert(int SortDir, unsigned char *pSrcBuf, int BufLe
 	return true;
 }
 //希尔排序
-bool SortMethodClass::Sort_Shell()
+//基本思想：在要排序的一组数中，根据某一增量分为若干子序列，并对子序列分别进行插入排序。
+//			然后逐渐将增量减小, 并重复上述过程。直至增量为1, 此时数据序列基本有序, 最后进行插入排序。
+//时间复杂度：
+bool SortMethodClass::Sort_Shell(int SortDir, unsigned char *pSrcBuf, int BufLen)
 {
-	return false;
+	int i = 0, j = 0;
+	unsigned char temp = 0;
+	int Incr = 0;
+	if ((NULL == pSrcBuf)
+		|| (0 > BufLen))
+	{
+		return false;
+	}
+	for (Incr = BufLen / 2; Incr > 0; Incr = Incr / 2)
+	{
+		for (i = 1; i<BufLen; i++)
+		{
+			for (j = i; j >0; j--)
+			{
+				if (pSrcBuf[j - 1] > pSrcBuf[j])
+				{
+					temp = pSrcBuf[j];
+					pSrcBuf[j] = pSrcBuf[j - 1];
+					pSrcBuf[j - 1] = temp;
+				}
+			}
+		}
+	}
+	
+	return true;
 }
 //归并排序
 bool SortMethodClass::Sort_Merage()
